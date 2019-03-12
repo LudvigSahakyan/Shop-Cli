@@ -1,0 +1,13 @@
+com\shop\app\loggers\Level.class
+com\shop\app\controllers\cli\ShopCliController.class
+com\shop\app\controllers\Controller.class
+com\shop\app\repositories\Repository.class
+com\shop\app\managers\Manager.class
+com\shop\app\loggers\Color.class
+com\shop\app\loggers\Logger.class
+com\shop\app\loggers\ILogger.class
+com\shop\app\repositories\productrepositories\ProductRepository.class
+com\shop\app\controllers\cli\ICrud.class
+com\shop\app\models\Product.class
+com\shop\app\controllers\cli\CliController.class
+com\shop\app\App.class
