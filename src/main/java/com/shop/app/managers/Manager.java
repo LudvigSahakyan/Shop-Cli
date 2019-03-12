@@ -25,7 +25,7 @@ public class Manager {
 				new Manager();
 			}
 		} catch (SQLException e) {
-			throw new RuntimeException();
+			throw new RuntimeException("Database connection error");
 		}
 		return connection;
 	}

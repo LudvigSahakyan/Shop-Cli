@@ -11,8 +11,7 @@ import com.shop.app.repositories.productrepositories.ProductRepository;
 
 public class ShopCliController extends CliController implements ICrud {
 
-	Logger logger = new Logger();
-
+	
 	public ShopCliController(List<String> options, Logger logger) {
 
 		super(options, logger);
@@ -87,8 +86,7 @@ public class ShopCliController extends CliController implements ICrud {
 
 				@Override
 				public int compare(Product o1, Product o2) {
-					
-					return 0;
+					return o1.getName().compareToIgnoreCase(o2.getName());
 				}
 			});
 			
@@ -98,7 +96,7 @@ public class ShopCliController extends CliController implements ICrud {
 			while (iterator.hasNext()) {
 				Product product = (Product) iterator.next();
 				logger.info(
-						" " + product.getName() + ": " + product.getPrice() + " euro " + product.getQuantity() + "items"
+						" " + product.getName() + ": " + product.getPrice() + " euro " + product.getQuantity() + " items"
 
 				);
 
