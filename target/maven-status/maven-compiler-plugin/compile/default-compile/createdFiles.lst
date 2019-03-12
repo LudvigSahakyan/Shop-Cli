@@ -10,4 +10,5 @@ com\shop\app\repositories\productrepositories\ProductRepository.class
 com\shop\app\controllers\cli\ICrud.class
 com\shop\app\models\Product.class
 com\shop\app\controllers\cli\CliController.class
+com\shop\app\resources\Resource.class
 com\shop\app\App.class
