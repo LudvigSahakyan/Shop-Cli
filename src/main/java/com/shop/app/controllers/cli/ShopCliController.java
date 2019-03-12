@@ -1,6 +1,7 @@
 package com.shop.app.controllers.cli;
 
 import java.sql.SQLException;
+import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.List;
@@ -81,6 +82,17 @@ public class ShopCliController extends CliController implements ICrud {
 
 		try {
 			List<Product> products = repository.findAll();
+			
+			products.sort(new Comparator<Product>() {
+
+				@Override
+				public int compare(Product o1, Product o2) {
+					
+					return 0;
+				}
+			});
+			
+			
 
 			Iterator<Product> iterator = products.iterator();
 			while (iterator.hasNext()) {

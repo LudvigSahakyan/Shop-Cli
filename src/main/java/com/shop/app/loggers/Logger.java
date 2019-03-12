@@ -2,10 +2,6 @@ package com.shop.app.loggers;
 
 public class Logger implements ILogger {
 
-	public Logger() {
-
-	}
-
 	@Override
 	public void success(String message) {
 

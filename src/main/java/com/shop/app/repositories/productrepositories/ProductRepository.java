@@ -13,10 +13,7 @@ import com.shop.app.repositories.Repository;
 
 public class ProductRepository extends Repository {
 
-	public ProductRepository() {
-
-	}
-
+	
 	public void persist(Product product) throws SQLException {
 
 		Connection connection = getConnection();
