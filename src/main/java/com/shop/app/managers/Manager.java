@@ -13,7 +13,7 @@ public class Manager {
 
 	private static Connection connection;
 
-	private Manager() throws SQLException, RuntimeException {
+	private Manager() {
 	
 		Resource resource = new Resource("mysql");
 		
@@ -23,15 +23,15 @@ public class Manager {
 		connection = DriverManager.getConnection(resource.getXmlElement("url"), properties);
 	}
 
-	public static Connection getConnection() throws RuntimeException {
+	public static Connection getConnection() {
 
 		try {
 			if (null == connection) {
 				new Manager();
 			}
-		} catch (SQLException | RuntimeException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException("Database connection error");
+			
 		}
 		return connection;
 	}

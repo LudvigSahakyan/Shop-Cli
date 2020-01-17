@@ -7,9 +7,9 @@ import org.w3c.dom.Node;
 
 public class Resource {
 
-	Node element;
+	private Node element;
 
-	public Resource(String resourceName) throws RuntimeException {
+	public Resource(String resourceName) {
 
 		try {
 		element = DocumentBuilderFactory
@@ -17,8 +17,8 @@ public class Resource {
 				.newDocumentBuilder()
 				.parse(new File("src/main/resources/" + resourceName + ".xml"))
 		        .getElementsByTagName("resource").item(0); 
-		} catch (Throwable e) {
-			throw new RuntimeException("Unable to read resource: " + resourceName);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 
 	}
